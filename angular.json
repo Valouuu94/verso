@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "afd-newv-ng:build:production"
+              "buildTarget": "afd-newv-ng:build:production"
             },
             "development": {
-              "browserTarget": "afd-newv-ng:build:development"
+              "buildTarget": "afd-newv-ng:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "afd-newv-ng:build"
+            "buildTarget": "afd-newv-ng:build"
           }
         },
         "test": {

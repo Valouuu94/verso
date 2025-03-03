@@ -1,0 +1,11 @@
+https://www.ganatan.com/tutorials/demarrer-avec-angular
+
+# command
+node -v -> v14.18.0
+npm -v 
+npm install npm -g -> v8.5.5
+npm uninstall -g @angular/cli
+npm install -g @angular/cli -> 13.3.0
+ng new afd-newv-ng
+ng serve
+ng g c components/xxx

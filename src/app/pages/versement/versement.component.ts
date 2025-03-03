@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
 import { SelectBeneficiaireComponent } from '../../components/select-beneficiaire/select-beneficiaire.component';
 import { InfosBeneficiaireComponent } from '../../components/infos-beneficiaire/infos-beneficiaire.component';
@@ -15,6 +14,7 @@ import { ContentComponent } from '../../components/content/content.component';
 import { BtnComponent } from '../../components/btn/btn.component';
 import { BtnMenuComponent } from '../../components/btnMenu/btnMenu.component';
 import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 declare const app: any;
 declare const appFormio: any;
@@ -26,7 +26,7 @@ declare const formFields: any;
     selector: 'app-versement',
     templateUrl: './versement.component.html',
     standalone: true,
-    imports: [CommonModule, NavActionsComponent, BtnMenuComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, InfosDossierComponent, NotificationComponent, TeleportComponent, AutreDeviseComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent]
+    imports: [CommonModule, NavActionsComponent, BtnMenuComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, InfosDossierComponent, NotificationComponent, TeleportComponent, AutreDeviseComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent, RouterModule]
 })
 export class VersementComponent implements OnInit {
 

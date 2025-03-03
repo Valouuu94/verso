@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
 import { TypeAvanceComponent } from 'src/app/components/type-avance/type-avance.component';
 import { ModalComponent } from '../../components/modal/modal.component';
@@ -26,7 +26,7 @@ declare const refs: any;
     selector: 'app-avance',
     templateUrl: './avance.component.html',
     standalone: true,
-    imports: [CommonModule, NavActionsComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, TeleportComponent, TableComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent, ModalComponent]
+    imports: [CommonModule, NavActionsComponent,RouterModule, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, TeleportComponent, TableComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent, ModalComponent]
 })
 export class AvanceComponent implements OnInit {
 

@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { AdminUtilisateursComponent } from './pages/admin-utilisateurs/admin-utilisateurs.component';
 import { AvanceComponent } from './pages/avance/avance.component';
 import { DocumentContractuelComponent } from './pages/documentContractuel/documentContractuel.component';
@@ -33,7 +32,7 @@ import { JustificatifRemboursementComponent } from './pages/justificatif-rembour
 import { AdminOrganisationComponent } from './pages/admin-organisation/admin-organisation.component';
 import { HistoriqueDossiersRajComponent } from './pages/historique-dossiers-raj/historique-dossiers-raj.component';
 
-const routes: Routes = [
+export const routes: Routes = [
 	{ path: '', redirectTo: 'taches', pathMatch: 'full' },
 	{ path: 'taches', component: TachesComponent },
 	{ path: 'projets', component: ProjetsComponent },
@@ -79,9 +78,3 @@ const routes: Routes = [
 	{ path: 'historique/anomalie/:id/:type', component: AnomalieComponent },
 	//TODO { path: '**', component: NotFoundComponent }
 ];
-
-@NgModule({
-	imports: [RouterModule.forRoot(routes, { useHash: true })],
-	exports: [RouterModule]
-})
-export class AppRoutingModule { }

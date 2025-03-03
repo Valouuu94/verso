@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
+import { CommonModule } from '@angular/common';
 import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
@@ -10,7 +10,7 @@ declare const lang: any;
     selector: 'app-pilotage-affectation-dossiers',
     templateUrl: './pilotage-affectation-dossiers.component.html',
     standalone: true,
-    imports: [ContentComponent, CommonModule]
+    imports: [CommonModule, ContentComponent]
 })
 export class PilotageAffectationDossiersComponent implements OnInit {
 

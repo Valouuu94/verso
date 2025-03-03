@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UtilisateurAdhesionComponent } from './utilisateur-adhesion.component';
 
 describe('UtilisateurAdhesionComponent', () => {
@@ -8,8 +7,8 @@ describe('UtilisateurAdhesionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UtilisateurAdhesionComponent ]
-    })
+    imports: [UtilisateurAdhesionComponent]
+})
     .compileComponents();
   });
 

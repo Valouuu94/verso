@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ExportExcelComponent } from 'src/app/components/export-excel/export-excel.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
-import { TeleportComponent } from 'src/app/components/teleport/teleport.component';
 import { UtilisateurAdhesionComponent } from './utilisateur-adhesion/utilisateur-adhesion.component';
+import { TeleportComponent } from '../../components/teleport/teleport.component';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { ExportExcelComponent } from '../../components/export-excel/export-excel.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
@@ -12,8 +14,10 @@ declare const crossVars: any;
 declare const appFormio: any;
 
 @Component({
-	selector: 'app-admin-utilisateurs',
-	templateUrl: './admin-utilisateurs.component.html'
+    selector: 'app-admin-utilisateurs',
+    templateUrl: './admin-utilisateurs.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, TableComponent, ExportExcelComponent, ModalComponent, UtilisateurAdhesionComponent, TeleportComponent],
 })
 export class AdminUtilisateursComponent implements OnInit {
 

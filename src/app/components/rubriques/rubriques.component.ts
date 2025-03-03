@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter, Input } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { TableComponent } from "../table/table.component";
 import { StoreService } from "src/app/services/store.service";
-import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { ModalComponent } from "../modal/modal.component";
 
 declare const app: any;
 declare const appFormio: any;
@@ -11,7 +12,9 @@ declare const columns: any;
 
 @Component({
     selector: "app-rubriques",
-    templateUrl: "./rubriques.component.html"
+    templateUrl: "./rubriques.component.html",
+    standalone: true,
+    imports: [CommonModule, TableComponent, ModalComponent]
 })
 export class RubriquesComponent implements OnInit {
     @ViewChild("tableRubriques") tableRubriques!: TableComponent;

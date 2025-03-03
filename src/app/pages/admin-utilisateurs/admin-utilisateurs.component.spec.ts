@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AdminUtilisateursComponent } from './admin-utilisateurs.component';
 
 describe('AdminUtilisateursComponent', () => {
@@ -8,8 +7,8 @@ describe('AdminUtilisateursComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminUtilisateursComponent ]
-    })
+    imports: [AdminUtilisateursComponent]
+})
     .compileComponents();
   });
 

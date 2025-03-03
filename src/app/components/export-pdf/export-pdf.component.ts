@@ -5,8 +5,9 @@ declare var pdfMake: any;
 declare var pdfFonts: any
 
 @Component({
-	selector: 'app-export-pdf',
-	templateUrl: './export-pdf.component.html'
+    selector: 'app-export-pdf',
+    templateUrl: './export-pdf.component.html',
+    standalone: true
 })
 export class ExportPdfComponent implements OnInit {
 

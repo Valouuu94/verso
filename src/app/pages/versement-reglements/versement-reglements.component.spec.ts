@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { VersementReglementsComponent } from './versement-reglements.component';
 
 describe('VersementReglementsComponent', () => {
@@ -8,8 +7,8 @@ describe('VersementReglementsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VersementReglementsComponent ]
-    })
+    imports: [VersementReglementsComponent]
+})
     .compileComponents();
   });
 

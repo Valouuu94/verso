@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-infos-coordonnee-bancaire',
-	templateUrl: './infos-coordonnee-bancaire.component.html'
+    selector: 'app-infos-coordonnee-bancaire',
+    templateUrl: './infos-coordonnee-bancaire.component.html',
+    standalone: true,
+    imports: [CommonModule, FormsModule]
 })
 export class InfosCoordonneBancaireComponent implements OnInit {
 

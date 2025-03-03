@@ -8,8 +8,8 @@ describe('AutreDeviseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AutreDeviseComponent ]
-    })
+    imports: [AutreDeviseComponent]
+})
     .compileComponents();
   });
 

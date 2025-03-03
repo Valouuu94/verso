@@ -1,13 +1,14 @@
-import { ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
 import { AutreDeviseComponent } from '../autre-devise/autre-devise.component';
 import { InfosBeneficiaireComponent } from '../infos-beneficiaire/infos-beneficiaire.component';
 import { ModalComponent } from '../modal/modal.component';
 import { TeleportComponent } from '../teleport/teleport.component';
-import { TableComponent } from 'src/app/components/table/table.component';
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { SelectBeneficiaireComponent } from 'src/app/components/select-beneficiaire/select-beneficiaire.component';
+import { SelectBeneficiaireComponent } from '../select-beneficiaire/select-beneficiaire.component';
+import { SpinnerComponent } from '../spinner/spinner.component';
+import { TableComponent } from '../table/table.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -16,8 +17,10 @@ declare const lang: any;
 declare const formFields: any;
 
 @Component({
-	selector: 'app-infos-versement',
-	templateUrl: './infos-versement.component.html'
+    selector: 'app-infos-versement',
+    templateUrl: './infos-versement.component.html',
+    standalone: true,
+    imports: [CommonModule, ModalComponent, SpinnerComponent, TeleportComponent, InfosBeneficiaireComponent, AutreDeviseComponent, SelectBeneficiaireComponent, TableComponent]
 })
 export class InfosVersementComponent implements OnInit {
 

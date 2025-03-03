@@ -1,13 +1,16 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
+import { CommonModule } from '@angular/common';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-comments',
-	templateUrl: './comments.component.html',
-	changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-comments',
+    templateUrl: './comments.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [CommonModule]
 })
 export class CommentsComponent implements OnInit {
 

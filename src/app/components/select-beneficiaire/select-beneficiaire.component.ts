@@ -1,13 +1,18 @@
-import { Component, OnInit, Input, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { TableComponent } from '../table/table.component';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../modal/modal.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-select-beneficiaire',
-	templateUrl: './select-beneficiaire.component.html'
+    selector: 'app-select-beneficiaire',
+    templateUrl: './select-beneficiaire.component.html',
+    standalone: true,
+    imports: [CommonModule, FormsModule, ModalComponent, TableComponent]
 })
 export class SelectBeneficiaireComponent implements OnInit {
 	@ViewChild('tableTiers') tableTiers!: TableComponent;

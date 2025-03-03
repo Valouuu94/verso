@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AvanceContractuelControlesComponent } from './avance-contractuel-controles.component';
 
 describe('AvanceContractuelControlesComponent', () => {
@@ -8,8 +7,8 @@ describe('AvanceContractuelControlesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AvanceContractuelControlesComponent ]
-    })
+    imports: [AvanceContractuelControlesComponent]
+})
     .compileComponents();
   });
 

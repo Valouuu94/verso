@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TachesComponent } from './taches.component';
+import { AdminTachesComponent } from './admin-taches.component';
 
 describe('TachesComponent', () => {
-  let component: TachesComponent;
-  let fixture: ComponentFixture<TachesComponent>;
+  let component: AdminTachesComponent;
+  let fixture: ComponentFixture<AdminTachesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TachesComponent ]
-    })
+    imports: [AdminTachesComponent]
+})
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TachesComponent);
+    fixture = TestBed.createComponent(AdminTachesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

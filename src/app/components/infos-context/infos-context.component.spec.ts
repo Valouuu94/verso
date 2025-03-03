@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InfosContextComponent } from './infos-context.component';
 
 describe('InfosContextComponent', () => {
@@ -8,8 +7,8 @@ describe('InfosContextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InfosContextComponent ]
-    })
+    imports: [InfosContextComponent]
+})
     .compileComponents();
   });
 

@@ -1,12 +1,15 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TableComponent } from '../table/table.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-infos-concours',
-	templateUrl: './infos-concours.component.html'
+    selector: 'app-infos-concours',
+    templateUrl: './infos-concours.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class InfosConcoursComponent implements OnInit {
 
@@ -32,7 +35,7 @@ export class InfosConcoursComponent implements OnInit {
 
 	async getConcours(numeroConcours: any, enableCollapse: any) {
 		this.concours = await app.getAllDataConcoursById(numeroConcours);
-        	this.enableCollapse = enableCollapse;
+        this.enableCollapse = enableCollapse;
 		var projet = await app.getExternalData(app.getUrl('urlGetProjetByNum', this.concours.numeroProjet), 'cmp-info-concours > get projet', true);
 
 		var concoursGCF = await app.getExternalData(app.getUrl('urlGetConcoursGCFByProjet', this.concours.numeroProjet), 'cmp-info-context > getConcoursGCF');

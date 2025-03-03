@@ -3,7 +3,8 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 declare const app: any;
 
 @Directive({
-  selector: 'input[separator]',
+    selector: 'input[separator]',
+    standalone: true
 })
 export class FormatNumberInput {
   constructor(private _inputEl: ElementRef) {}

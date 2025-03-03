@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
 
@@ -8,8 +9,10 @@ declare const lang: any;
 declare const version: any;
 
 @Component({
-	selector: 'app-nav',
-	templateUrl: './nav.component.html'
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class NavComponent implements OnInit {
 

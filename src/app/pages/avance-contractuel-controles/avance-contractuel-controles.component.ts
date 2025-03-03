@@ -1,21 +1,27 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { ControlesComponent } from 'src/app/components/controles/controles.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { Location, CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
-import { NotificationComponent } from 'src/app/components/notification/notification.component';
 import { InfosDossierComponent } from 'src/app/components/infos-dossier/infos-dossier.component';
-import { Location } from '@angular/common';
+import { NotificationComponent } from '../../components/notification/notification.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ControlesComponent } from '../../components/controles/controles.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const urls: any;
 declare const lang: any;
-declare const $: any;
 
 @Component({
-	selector: 'app-avance-contractuel-controles',
-	templateUrl: './avance-contractuel-controles.component.html'
+    selector: 'app-avance-contractuel-controles',
+    templateUrl: './avance-contractuel-controles.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, ControlesComponent, TableComponent, NotificationComponent]
 })
 export class AvanceContractuelControlesComponent implements OnInit {
 

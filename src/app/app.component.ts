@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { StoreService } from './services/store.service';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { NavComponent } from './components/nav/nav.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
 	selector: 'app-root',
-	templateUrl: './app.component.html'
+	templateUrl: './app.component.html',
+	standalone: true,
+	imports: [CommonModule, SpinnerComponent, NavComponent, RouterModule]
 })
 export class AppComponent {
 

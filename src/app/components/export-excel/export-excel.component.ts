@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import * as XLSX from 'xlsx';
 
 declare const app: any;
@@ -6,8 +7,10 @@ declare const columns: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-export-excel',
-	templateUrl: './export-excel.component.html'
+    selector: 'app-export-excel',
+    templateUrl: './export-excel.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class ExportExcelComponent implements OnInit {
 

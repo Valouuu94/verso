@@ -3,8 +3,9 @@ import { Component, Input, OnInit } from '@angular/core';
 declare const app: any;
 
 @Component({
-	selector: 'app-teleport',
-	templateUrl: './teleport.component.html'
+    selector: 'app-teleport',
+    templateUrl: './teleport.component.html',
+    standalone: true
 })
 export class TeleportComponent implements OnInit {
 

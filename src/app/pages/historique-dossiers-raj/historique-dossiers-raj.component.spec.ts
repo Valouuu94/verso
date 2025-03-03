@@ -7,8 +7,8 @@ describe('HistoriqueDossiersRajComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoriqueDossiersRajComponent ]
-    })
+    imports: [HistoriqueDossiersRajComponent]
+})
     .compileComponents();
   });
 

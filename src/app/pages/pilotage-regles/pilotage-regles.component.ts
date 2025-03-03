@@ -1,13 +1,19 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
 declare const refs: any;
 
 @Component({
-	selector: 'app-pilotage-regles',
-	templateUrl: './pilotage-regles.component.html'
+    selector: 'app-pilotage-regles',
+    templateUrl: './pilotage-regles.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, CardComponent, FormsModule]
 })
 export class PilotageReglesComponent implements OnInit {
 	app: any = app;

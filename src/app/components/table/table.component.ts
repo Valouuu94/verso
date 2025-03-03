@@ -1,13 +1,19 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
+import { FormatNumberInput } from '../../directives/format-number/formatNumberInput';
+import { SpinnerComponent } from '../spinner/spinner.component';
 
 declare const app: any;
 declare const lang: any;
 declare const columns: any;
 
 @Component({
-	selector: 'app-table',
-	templateUrl: './table.component.html'
+    selector: 'app-table',
+    templateUrl: './table.component.html',
+    standalone: true,
+    imports: [CommonModule, FormsModule, SpinnerComponent, FormatNumberInput]
 })
 export class TableComponent implements OnInit {
 

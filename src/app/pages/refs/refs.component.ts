@@ -1,15 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const appFormio: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-refs',
-	templateUrl: './refs.component.html'
+    selector: 'app-refs',
+    templateUrl: './refs.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, TableComponent, ModalComponent]
 })
 export class RefsComponent implements OnInit {
 

@@ -1,14 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
 
 declare const app: any;
 declare const lang: any;
-declare const refs: any;
 
 @Component({
     selector: 'app-infos-avance',
-    templateUrl: './infos-avance.component.html'
+    templateUrl: './infos-avance.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class InfosAvanceComponent implements OnInit {
     avanceContractuel: any = null;

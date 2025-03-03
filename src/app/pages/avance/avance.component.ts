@@ -1,14 +1,18 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TeleportComponent } from 'src/app/components/teleport/teleport.component';
-import { TypeAvanceComponent } from 'src/app/components/type-avance/type-avance.component';
-import { TableComponent } from 'src/app/components/table/table.component';
 import { StoreService } from 'src/app/services/store.service';
-import { InfosBeneficiaireComponent } from 'src/app/components/infos-beneficiaire/infos-beneficiaire.component';
-import { SelectBeneficiaireComponent } from 'src/app/components/select-beneficiaire/select-beneficiaire.component';
-import { InfosContextComponent } from 'src/app/components/infos-context/infos-context.component';
+import { TypeAvanceComponent } from 'src/app/components/type-avance/type-avance.component';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { SelectBeneficiaireComponent } from '../../components/select-beneficiaire/select-beneficiaire.component';
+import { InfosBeneficiaireComponent } from '../../components/infos-beneficiaire/infos-beneficiaire.component';
+import { TableComponent } from '../../components/table/table.component';
+import { TeleportComponent } from '../../components/teleport/teleport.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -19,8 +23,10 @@ declare const formFields: any;
 declare const refs: any;
 
 @Component({
-	selector: 'app-avance',
-	templateUrl: './avance.component.html'
+    selector: 'app-avance',
+    templateUrl: './avance.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, TeleportComponent, TableComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent, ModalComponent]
 })
 export class AvanceComponent implements OnInit {
 

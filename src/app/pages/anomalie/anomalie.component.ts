@@ -1,9 +1,15 @@
-import { Location } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const lang: any;
@@ -11,8 +17,10 @@ declare const $: any;
 declare const actionsAnomalie: any;
 
 @Component({
-	selector: 'app-anomalie',
-	templateUrl: './anomalie.component.html'
+    selector: 'app-anomalie',
+    templateUrl: './anomalie.component.html',
+    standalone: true,
+    imports: [NavActionsComponent, CommonModule, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, FormsModule, ModalComponent]
 })
 export class AnomalieComponent implements OnInit {
 

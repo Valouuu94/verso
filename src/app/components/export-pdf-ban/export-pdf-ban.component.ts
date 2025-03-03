@@ -4,8 +4,10 @@ import { ExportPdfComponent } from '../export-pdf/export-pdf.component';
 declare const app: any;
 
 @Component({
-	selector: 'app-export-pdf-ban',
-	templateUrl: './export-pdf-ban.component.html'
+    selector: 'app-export-pdf-ban',
+    templateUrl: './export-pdf-ban.component.html',
+    standalone: true,
+    imports: [ExportPdfComponent]
 })
 export class ExportPdfBanComponent implements OnInit {
 

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ExportPdfBanComponent } from './export-pdf-ban.component';
 
 describe('ExportPdfBanComponent', () => {
@@ -8,8 +7,8 @@ describe('ExportPdfBanComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExportPdfBanComponent ]
-    })
+    imports: [ExportPdfBanComponent]
+})
     .compileComponents();
   });
 

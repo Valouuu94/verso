@@ -1,12 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../modal/modal.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-infos-dossier',
-	templateUrl: './infos-dossier.component.html'
+    selector: 'app-infos-dossier',
+    templateUrl: './infos-dossier.component.html',
+    standalone: true,
+    imports: [CommonModule, ModalComponent]
 })
 export class InfosDossierComponent implements OnInit {
 

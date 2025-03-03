@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-btnMenu',
-	templateUrl: './btnMenu.component.html'
+    selector: 'app-btnMenu',
+    templateUrl: './btnMenu.component.html',
+    standalone: true
 })
 export class BtnMenuComponent implements OnInit {
 

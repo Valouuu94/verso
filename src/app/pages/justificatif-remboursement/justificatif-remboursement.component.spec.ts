@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { JustificatifRemboursementComponent } from './justificatif-remboursement.component';
 
 describe('JustificatifRemboursementComponent', () => {
@@ -8,8 +7,8 @@ describe('JustificatifRemboursementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JustificatifRemboursementComponent ]
-    })
+    imports: [JustificatifRemboursementComponent]
+})
     .compileComponents();
   });
 

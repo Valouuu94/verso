@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ContreValeurComponent } from './contre-valeur.component';
 
 describe('ContreValeurComponent', () => {
@@ -8,8 +7,8 @@ describe('ContreValeurComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContreValeurComponent ]
-    })
+    imports: [ContreValeurComponent]
+})
     .compileComponents();
   });
 

@@ -1,15 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { TableComponent } from 'src/app/components/table/table.component';
 import { StoreService } from 'src/app/services/store.service';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const tachesRedirect: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-taches',
-	templateUrl: './taches.component.html'
+    selector: 'app-taches',
+    templateUrl: './taches.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, TableComponent]
 })
 export class TachesComponent implements OnInit {
 

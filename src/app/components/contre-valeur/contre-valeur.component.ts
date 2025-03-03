@@ -1,11 +1,15 @@
-import { Component, Input, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-contre-valeur',
-	templateUrl: './contre-valeur.component.html'
+    selector: 'app-contre-valeur',
+    templateUrl: './contre-valeur.component.html',
+    standalone: true,
+    imports: [CommonModule, FormsModule]
 })
 
 export class ContreValeurComponent implements OnInit {

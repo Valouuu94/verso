@@ -1,5 +1,9 @@
 import { Component, Input, OnInit, Output, EventEmitter, ViewChild, QueryList, ViewChildren } from '@angular/core';
 import { ContreValeurComponent } from 'src/app/components/contre-valeur/contre-valeur.component';
+import { ContreValeurComponent as ContreValeurComponent_1 } from '../contre-valeur/contre-valeur.component';
+import { FormsModule } from '@angular/forms';
+import { FormatNumberInput } from '../../directives/format-number/formatNumberInput';
+import { CommonModule } from '@angular/common';
 
 declare const app: any;
 declare const lang: any;
@@ -7,8 +11,10 @@ declare const appFormio: any;
 declare const crossVars: any;
 
 @Component({
-	selector: 'app-autre-devise',
-	templateUrl: './autre-devise.component.html'
+    selector: 'app-autre-devise',
+    templateUrl: './autre-devise.component.html',
+    standalone: true,
+    imports: [CommonModule, FormatNumberInput, FormsModule, ContreValeurComponent_1]
 })
 
 export class AutreDeviseComponent implements OnInit {

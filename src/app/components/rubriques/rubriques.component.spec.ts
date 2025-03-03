@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RubriquesComponent } from './rubriques.component';
 
 describe('ContentComponent', () => {
@@ -8,8 +7,8 @@ describe('ContentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RubriquesComponent ]
-    })
+    imports: [RubriquesComponent]
+})
     .compileComponents();
   });
 

@@ -1,15 +1,20 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { StoreService } from 'src/app/services/store.service';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { TeleportComponent } from 'src/app/components/teleport/teleport.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StoreService } from 'src/app/services/store.service';
+import { TableComponent } from 'src/app/components/table/table.component';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { AutreDeviseComponent } from 'src/app/components/autre-devise/autre-devise.component';
-import { ContreValeurComponent } from 'src/app/components/contre-valeur/contre-valeur.component';
-import { InfosBeneficiaireComponent } from 'src/app/components/infos-beneficiaire/infos-beneficiaire.component';
-import { RubriquesComponent } from 'src/app/components/rubriques/rubriques.component';
-import { SelectBeneficiaireComponent } from 'src/app/components/select-beneficiaire/select-beneficiaire.component';
+import { ContreValeurComponent } from '../../components/contre-valeur/contre-valeur.component';
+import { AutreDeviseComponent } from '../../components/autre-devise/autre-devise.component';
+import { RubriquesComponent } from '../../components/rubriques/rubriques.component';
+import { SelectBeneficiaireComponent } from '../../components/select-beneficiaire/select-beneficiaire.component';
+import { InfosBeneficiaireComponent } from '../../components/infos-beneficiaire/infos-beneficiaire.component';
+import { TeleportComponent } from '../../components/teleport/teleport.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -18,8 +23,10 @@ declare const urls: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-documentContractuel',
-	templateUrl: './documentContractuel.component.html'
+    selector: 'app-documentContractuel',
+    templateUrl: './documentContractuel.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, TeleportComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent, RubriquesComponent, AutreDeviseComponent, ContreValeurComponent]
 })
 export class DocumentContractuelComponent implements OnInit {
 

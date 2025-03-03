@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ParamThemesComponent } from './param-themes.component';
 
 describe('ParamThemesComponent', () => {
@@ -8,8 +7,8 @@ describe('ParamThemesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParamThemesComponent ]
-    })
+    imports: [ParamThemesComponent]
+})
     .compileComponents();
   });
 

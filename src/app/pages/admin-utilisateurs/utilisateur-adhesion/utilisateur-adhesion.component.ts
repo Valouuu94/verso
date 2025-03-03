@@ -1,11 +1,15 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-utilisateur-adhesion',
-	templateUrl: './utilisateur-adhesion.component.html'
+    selector: 'app-utilisateur-adhesion',
+    templateUrl: './utilisateur-adhesion.component.html',
+    standalone: true,
+    imports: [FormsModule, CommonModule]
 })
 export class UtilisateurAdhesionComponent implements OnInit {
 

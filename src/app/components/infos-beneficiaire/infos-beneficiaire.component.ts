@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
 
 declare const app: any;
@@ -7,8 +8,10 @@ declare const crossVars: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-infos-beneficiaire',
-	templateUrl: './infos-beneficiaire.component.html'
+    selector: 'app-infos-beneficiaire',
+    templateUrl: './infos-beneficiaire.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class InfosBeneficiaireComponent implements OnInit {
 

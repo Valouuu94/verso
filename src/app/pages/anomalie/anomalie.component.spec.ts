@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AnomalieComponent } from './anomalie.component';
 
 describe('AnomalieComponent', () => {
@@ -8,8 +7,8 @@ describe('AnomalieComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnomalieComponent ]
-    })
+    imports: [AnomalieComponent]
+})
     .compileComponents();
   });
 

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ParamCriteresComponent } from './param-criteres.component';
 
 describe('ParamCriteresComponent', () => {
@@ -8,8 +7,8 @@ describe('ParamCriteresComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParamCriteresComponent ]
-    })
+    imports: [ParamCriteresComponent]
+})
     .compileComponents();
   });
 

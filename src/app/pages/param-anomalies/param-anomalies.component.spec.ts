@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ParamAnomaliesComponent } from './param-anomalies.component';
 
 describe('ParamAnomaliesComponent', () => {
@@ -8,8 +7,8 @@ describe('ParamAnomaliesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParamAnomaliesComponent ]
-    })
+    imports: [ParamAnomaliesComponent]
+})
     .compileComponents();
   });
 

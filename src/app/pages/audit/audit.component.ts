@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { ExportExcelComponent } from 'src/app/components/export-excel/export-excel.component';
+import { CommonModule } from '@angular/common';
+import { ExportExcelComponent } from '../../components/export-excel/export-excel.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -8,8 +11,10 @@ declare const crossVars: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-audit',
-	templateUrl: './audit.component.html'
+    selector: 'app-audit',
+    templateUrl: './audit.component.html',
+    standalone: true,
+    imports: [ContentComponent, CommonModule, SpinnerComponent, BtnComponent, ExportExcelComponent]
 })
 export class AuditComponent implements OnInit {
 

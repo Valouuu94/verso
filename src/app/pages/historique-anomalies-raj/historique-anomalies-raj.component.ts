@@ -1,14 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
+import { TableComponent } from 'src/app/components/table/table.component';
+import { TableComponent as TableComponent_1 } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-historique-anomalies-raj',
-	templateUrl: './historique-anomalies-raj.component.html'
+    selector: 'app-historique-anomalies-raj',
+    templateUrl: './historique-anomalies-raj.component.html',
+    standalone: true,
+    imports: [ContentComponent, CommonModule, TableComponent_1]
 })
 export class HistoriqueAnomaliesRajComponent implements OnInit {
 

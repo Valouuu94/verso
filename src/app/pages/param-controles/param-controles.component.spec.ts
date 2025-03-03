@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ParamControlesComponent } from './param-controles.component';
 
 describe('ParamControlesComponent', () => {
@@ -8,8 +7,8 @@ describe('ParamControlesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParamControlesComponent ]
-    })
+    imports: [ParamControlesComponent]
+})
     .compileComponents();
   });
 

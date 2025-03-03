@@ -1,15 +1,17 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
 import { Router } from '@angular/router';
+import { SpinnerComponent } from '../spinner/spinner.component';
 
 declare const app: any;
 declare const lang: any;
-declare const appFormio: any;
-declare const crossVars: any;
 
 @Component({
-	selector: 'app-infos-context',
-	templateUrl: './infos-context.component.html'
+    selector: 'app-infos-context',
+    templateUrl: './infos-context.component.html',
+    standalone: true,
+    imports: [CommonModule, SpinnerComponent]
 })
 export class InfosContextComponent implements OnInit {
 

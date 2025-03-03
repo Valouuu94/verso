@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ExportPdfComponent } from './export-pdf.component';
 
 describe('ExportPdfComponent', () => {
@@ -8,8 +7,8 @@ describe('ExportPdfComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExportPdfComponent ]
-    })
+    imports: [ExportPdfComponent]
+})
     .compileComponents();
   });
 

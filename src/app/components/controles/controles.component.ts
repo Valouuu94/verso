@@ -1,16 +1,21 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
 import { CommentsComponent } from '../comments/comments.component';
-import { skip } from 'rxjs';
+import { BtnComponent } from '../btn/btn.component';
+import { BtnMenuComponent } from '../btnMenu/btnMenu.component';
 
 declare const app: any;
 declare const refs: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-controles',
-	templateUrl: './controles.component.html',
-	changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-controles',
+    templateUrl: './controles.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [CommonModule, BtnMenuComponent, BtnComponent, FormsModule, CommentsComponent]
 })
 export class ControlesComponent implements OnInit {
 

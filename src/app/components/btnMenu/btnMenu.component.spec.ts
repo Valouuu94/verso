@@ -8,8 +8,8 @@ describe('BtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BtnMenuComponent ]
-    })
+    imports: [BtnMenuComponent]
+})
     .compileComponents();
   });
 

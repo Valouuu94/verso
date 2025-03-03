@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PilotageReglesComponent } from './pilotage-regles.component';
 
 describe('PilotageReglesComponent', () => {
@@ -8,8 +7,8 @@ describe('PilotageReglesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PilotageReglesComponent ]
-    })
+    imports: [PilotageReglesComponent]
+})
     .compileComponents();
   });
 

@@ -1,18 +1,20 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
 import { InfosBeneficiaireComponent } from '../infos-beneficiaire/infos-beneficiaire.component';
 import { TeleportComponent } from '../teleport/teleport.component';
-import { TableComponent } from 'src/app/components/table/table.component';
-import { InfosAvanceComponent } from 'src/app/components/infos-avance/infos-avance.component';
-import { InfosCoordonneBancaireComponent } from 'src/app/components/infos-coordonnee-bancaire/infos-coordonnee-bancaire.component';
-import { ActivatedRoute, Router } from '@angular/router';
-import { InfosConcoursComponent } from 'src/app/components/infos-concours/infos-concours.component';
-import { SelectBeneficiaireComponent } from 'src/app/components/select-beneficiaire/select-beneficiaire.component';
-import { RubriquesComponent } from 'src/app/components/rubriques/rubriques.component';
-import { DocumentContractuelComponent } from 'src/app/pages/documentContractuel/documentContractuel.component';
-import { AvanceComponent } from 'src/app/pages/avance/avance.component';
-import { InfosDcComponent } from 'src/app/components/infos-dc/infos-dc.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { InfosDcComponent } from '../infos-dc/infos-dc.component';
+import { RubriquesComponent } from '../rubriques/rubriques.component';
+import { InfosCoordonneBancaireComponent } from '../infos-coordonnee-bancaire/infos-coordonnee-bancaire.component';
+import { InfosConcoursComponent } from '../infos-concours/infos-concours.component';
+import { TableComponent } from '../table/table.component';
+import { InfosAvanceComponent } from '../infos-avance/infos-avance.component';
+import { AvanceComponent } from '../../pages/avance/avance.component';
+import { DocumentContractuelComponent } from '../../pages/documentContractuel/documentContractuel.component';
+import { SpinnerComponent } from '../spinner/spinner.component';
+import { ModalComponent } from '../modal/modal.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -21,8 +23,10 @@ declare const urls: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-infos-reglement',
-	templateUrl: './infos-reglement.component.html'
+    selector: 'app-infos-reglement',
+    templateUrl: './infos-reglement.component.html',
+    standalone: true,
+    imports: [CommonModule, SpinnerComponent, TeleportComponent, FormsModule, InfosBeneficiaireComponent,InfosDcComponent,RubriquesComponent,InfosCoordonneBancaireComponent,InfosConcoursComponent,TableComponent,InfosAvanceComponent,AvanceComponent,DocumentContractuelComponent,ModalComponent],
 })
 export class InfosReglementComponent implements OnInit {
 
@@ -48,7 +52,6 @@ export class InfosReglementComponent implements OnInit {
 	@ViewChild('infosCoordonneeBancaire') infosCoordonneeBancaire!: InfosCoordonneBancaireComponent;
 	@ViewChild('teleportConcours') teleportConcours!: TeleportComponent;
 	@ViewChild('infosConcours') infosConcours!: InfosConcoursComponent;
-	@ViewChild('selectEmetteur') selectEmetteur!: SelectBeneficiaireComponent;
 	@ViewChild('infosEmetteurJustificatif') infosEmetteurJustificatif!: InfosBeneficiaireComponent;
 	@ViewChild('teleportSelectAvance') teleportSelectAvance!: TeleportComponent;
 	@ViewChild('rubriquesComponentJust') rubriquesComponentJust!: RubriquesComponent;

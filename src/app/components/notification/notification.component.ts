@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
 import { ModalComponent } from '../modal/modal.component';
 
@@ -10,8 +12,10 @@ declare const lang: any;
 declare const tachesRedirect: any;
 
 @Component({
-	selector: 'app-notification',
-	templateUrl: './notification.component.html'
+    selector: 'app-notification',
+    templateUrl: './notification.component.html',
+    standalone: true,
+    imports: [ModalComponent, CommonModule, FormsModule]
 })
 export class NotificationComponent implements OnInit {
 

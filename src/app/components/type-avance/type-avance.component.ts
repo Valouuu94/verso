@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { ModalComponent } from '../modal/modal.component';
 import { TableComponent } from '../table/table.component';
 
@@ -6,8 +8,10 @@ declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-type-avance',
-	templateUrl: './type-avance.component.html'
+    selector: 'app-type-avance',
+    templateUrl: './type-avance.component.html',
+    standalone: true,
+    imports: [CommonModule, TableComponent, ModalComponent, FormsModule]
 })
 export class TypeAvanceComponent implements OnInit {
 

@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { TableComponent } from '../../components/table/table.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -8,8 +11,10 @@ declare const lang: any;
 declare const crossVars: any;
 
 @Component({
-	selector: 'app-admin-organisation',
-	templateUrl: './admin-organisation.component.html'
+    selector: 'app-admin-organisation',
+    templateUrl: './admin-organisation.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, CardComponent, TableComponent, ModalComponent]
 })
 export class AdminOrganisationComponent implements OnInit {
 

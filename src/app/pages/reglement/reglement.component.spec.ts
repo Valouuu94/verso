@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ReglementComponent } from './reglement.component';
 
 describe('ReglementComponent', () => {
@@ -8,8 +7,8 @@ describe('ReglementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReglementComponent ]
-    })
+    imports: [ReglementComponent]
+})
     .compileComponents();
   });
 

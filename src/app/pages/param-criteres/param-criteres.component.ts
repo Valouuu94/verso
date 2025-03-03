@@ -1,16 +1,21 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ExportExcelComponent } from 'src/app/components/export-excel/export-excel.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { ExportExcelComponent } from '../../components/export-excel/export-excel.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
 declare const refs: any;
 
 @Component({
-	selector: 'app-param-criteres',
-	templateUrl: './param-criteres.component.html'
+    selector: 'app-param-criteres',
+    templateUrl: './param-criteres.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, FormsModule, TableComponent, ExportExcelComponent, ModalComponent]
 })
 export class ParamCriteresComponent implements OnInit {
 

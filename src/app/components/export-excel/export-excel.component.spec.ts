@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ExportExcelComponent } from './export-excel.component';
 
 describe('ExportExcelComponent', () => {
@@ -8,8 +7,8 @@ describe('ExportExcelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExportExcelComponent ]
-    })
+    imports: [ExportExcelComponent]
+})
     .compileComponents();
   });
 

@@ -1,20 +1,28 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { InfosReglementComponent } from 'src/app/components/infos-reglement/infos-reglement.component';
-import { InfosVersementComponent } from 'src/app/components/infos-versement/infos-versement.component';
-import { TableComponent } from 'src/app/components/table/table.component';
 import { StoreService } from 'src/app/services/store.service';
-import { NotificationComponent } from 'src/app/components/notification/notification.component';
-import { InfosDossierComponent } from 'src/app/components/infos-dossier/infos-dossier.component';
+import { NotificationComponent } from '../../components/notification/notification.component';
+import { InfosReglementComponent } from '../../components/infos-reglement/infos-reglement.component';
+import { TableComponent } from '../../components/table/table.component';
+import { InfosVersementComponent } from '../../components/infos-versement/infos-versement.component';
+import { InfosDossierComponent } from '../../components/infos-dossier/infos-dossier.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { BtnMenuComponent } from '../../components/btnMenu/btnMenu.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
-declare const $: any;
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-versement-reglements',
-	templateUrl: './versement-reglements.component.html'
+    selector: 'app-versement-reglements',
+    templateUrl: './versement-reglements.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnMenuComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, InfosDossierComponent, InfosVersementComponent, TableComponent, InfosReglementComponent, NotificationComponent]
 })
 export class VersementReglementsComponent implements OnInit {
 

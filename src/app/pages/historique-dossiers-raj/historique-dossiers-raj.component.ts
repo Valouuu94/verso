@@ -1,15 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { TableComponent } from 'src/app/components/table/table.component';
 import { StoreService } from 'src/app/services/store.service';
-import { ExportExcelComponent } from 'src/app/components/export-excel/export-excel.component';
+import { ExportExcelComponent } from '../../components/export-excel/export-excel.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-historique-dossiers-raj',
-	templateUrl: './historique-dossiers-raj.component.html'
+    selector: 'app-historique-dossiers-raj',
+    templateUrl: './historique-dossiers-raj.component.html',
+    standalone: true,
+    imports: [ContentComponent, CommonModule, TableComponent, ExportExcelComponent]
 })
 export class HistoriqueDossiersRajComponent implements OnInit {
 

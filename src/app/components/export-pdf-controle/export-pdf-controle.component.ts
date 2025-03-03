@@ -4,8 +4,10 @@ import { ExportPdfComponent } from '../export-pdf/export-pdf.component';
 declare const app: any;
 
 @Component({
-	selector: 'app-export-pdf-controle',
-	templateUrl: './export-pdf-controle.component.html'
+    selector: 'app-export-pdf-controle',
+    templateUrl: './export-pdf-controle.component.html',
+    standalone: true,
+    imports: [ExportPdfComponent]
 })
 export class ExportPdfControleComponent implements OnInit {
 	@ViewChild('exportPDF') exportPDF!: ExportPdfComponent;

@@ -1,10 +1,16 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { TeleportComponent } from 'src/app/components/teleport/teleport.component';
 import { StoreService } from 'src/app/services/store.service';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RubriquesComponent } from 'src/app/components/rubriques/rubriques.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { RubriquesComponent } from '../../components/rubriques/rubriques.component';
+import { TableComponent } from '../../components/table/table.component';
+import { TeleportComponent } from '../../components/teleport/teleport.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -12,8 +18,10 @@ declare const crossVars: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-justificatif-remboursement',
-	templateUrl: './justificatif-remboursement.component.html'
+    selector: 'app-justificatif-remboursement',
+    templateUrl: './justificatif-remboursement.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, TeleportComponent, TableComponent, RubriquesComponent]
 })
 export class JustificatifRemboursementComponent implements OnInit {
 

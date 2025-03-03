@@ -1,10 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { StoreService } from 'src/app/services/store.service';
-import { ExportExcelComponent } from 'src/app/components/export-excel/export-excel.component';
-import { TeleportComponent } from 'src/app/components/teleport/teleport.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { TeleportComponent } from '../../components/teleport/teleport.component';
+import { ExportExcelComponent } from '../../components/export-excel/export-excel.component';
+import { TableComponent } from '../../components/table/table.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -12,8 +17,10 @@ declare const crossVars: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-reporting',
-	templateUrl: './reporting.component.html'
+    selector: 'app-reporting',
+    templateUrl: './reporting.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, CardComponent, ModalComponent, SpinnerComponent, TableComponent, ExportExcelComponent, TeleportComponent, FormsModule]
 })
 export class ReportingComponent implements OnInit {
 

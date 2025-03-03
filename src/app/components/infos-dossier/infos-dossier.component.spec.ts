@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InfosDossierComponent } from './infos-dossier.component';
 
 describe('InfosDossierComponent', () => {
@@ -8,8 +7,8 @@ describe('InfosDossierComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InfosDossierComponent ]
-    })
+    imports: [InfosDossierComponent]
+})
     .compileComponents();
   });
 

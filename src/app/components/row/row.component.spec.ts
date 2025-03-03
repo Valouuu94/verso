@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RowComponent } from './row.component';
 
 describe('RowComponent', () => {
@@ -8,8 +7,8 @@ describe('RowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RowComponent ]
-    })
+    imports: [RowComponent]
+})
     .compileComponents();
   });
 

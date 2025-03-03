@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { async } from '@angular/core/testing';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const appFormio: any;
@@ -11,8 +13,10 @@ declare const lang: any;
 declare const $: any;
 
 @Component({
-	selector: 'app-param-controles',
-	templateUrl: './param-controles.component.html'
+    selector: 'app-param-controles',
+    templateUrl: './param-controles.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, TableComponent, ModalComponent, FormsModule]
 })
 export class ParamControlesComponent implements OnInit {
 

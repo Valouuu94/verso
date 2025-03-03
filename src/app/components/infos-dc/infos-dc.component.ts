@@ -1,14 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
 
 declare const app: any;
 declare const lang: any;
-declare const refs: any;
 
 @Component({
     selector: 'app-infos-dc',
-    templateUrl: './infos-dc.component.html'
+    templateUrl: './infos-dc.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class InfosDcComponent implements OnInit {
     documentContractuel: any;

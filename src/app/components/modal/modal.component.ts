@@ -1,11 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { CommonModule} from '@angular/common';
 import { BtnComponent } from '../btn/btn.component';
 
 declare const lang: any;
 
 @Component({
-	selector: 'app-modal',
-	templateUrl: './modal.component.html'
+    selector: 'app-modal',
+    templateUrl: './modal.component.html',
+    standalone: true,
+    imports: [CommonModule, BtnComponent]
 })
 export class ModalComponent implements OnInit {
 

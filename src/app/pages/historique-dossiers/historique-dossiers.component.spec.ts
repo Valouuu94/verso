@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HistoriqueDossiersComponent } from './historique-dossiers.component';
 
 describe('HistoriqueDossiersComponent', () => {
@@ -8,8 +7,8 @@ describe('HistoriqueDossiersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoriqueDossiersComponent ]
-    })
+    imports: [HistoriqueDossiersComponent]
+})
     .compileComponents();
   });
 

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PilotageAffectationDossiersComponent } from './pilotage-affectation-dossiers.component';
 
 describe('PilotageAffectationDossiersComponent', () => {
@@ -8,8 +7,8 @@ describe('PilotageAffectationDossiersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PilotageAffectationDossiersComponent ]
-    })
+    imports: [PilotageAffectationDossiersComponent]
+})
     .compileComponents();
   });
 

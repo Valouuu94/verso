@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InfosCoordonneBancaireComponent } from './infos-coordonnee-bancaire.component';
 
 describe('InfosCoordonneBancaireComponent', () => {
@@ -8,8 +7,8 @@ describe('InfosCoordonneBancaireComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InfosCoordonneBancaireComponent ]
-    })
+    imports: [InfosCoordonneBancaireComponent]
+})
     .compileComponents();
   });
 

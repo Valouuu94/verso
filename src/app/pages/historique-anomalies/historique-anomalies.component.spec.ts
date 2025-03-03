@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HistoriqueAnomaliesComponent } from './historique-anomalies.component';
 
 describe('HistoriqueAnomaliesComponent', () => {
@@ -8,8 +7,8 @@ describe('HistoriqueAnomaliesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoriqueAnomaliesComponent ]
-    })
+    imports: [HistoriqueAnomaliesComponent]
+})
     .compileComponents();
   });
 

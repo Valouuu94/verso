@@ -1,24 +1,32 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AutreDeviseComponent } from 'src/app/components/autre-devise/autre-devise.component';
-import { BtnComponent } from 'src/app/components/btn/btn.component';
-import { InfosBeneficiaireComponent } from 'src/app/components/infos-beneficiaire/infos-beneficiaire.component';
-import { TeleportComponent } from 'src/app/components/teleport/teleport.component';
 import { StoreService } from 'src/app/services/store.service';
-import { NotificationComponent } from 'src/app/components/notification/notification.component';
-import { InfosDossierComponent } from 'src/app/components/infos-dossier/infos-dossier.component';
-import { SelectBeneficiaireComponent } from 'src/app/components/select-beneficiaire/select-beneficiaire.component';
+import { SelectBeneficiaireComponent } from '../../components/select-beneficiaire/select-beneficiaire.component';
+import { InfosBeneficiaireComponent } from '../../components/infos-beneficiaire/infos-beneficiaire.component';
+import { AutreDeviseComponent } from '../../components/autre-devise/autre-devise.component';
+import { TeleportComponent } from '../../components/teleport/teleport.component';
+import { NotificationComponent } from '../../components/notification/notification.component';
+import { InfosDossierComponent } from '../../components/infos-dossier/infos-dossier.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { InfosContextComponent } from '../../components/infos-context/infos-context.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { BtnMenuComponent } from '../../components/btnMenu/btnMenu.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const appFormio: any;
 declare const crossVars: any;
 declare const lang: any;
-declare const $: any;
 declare const formFields: any;
 
 @Component({
-	selector: 'app-versement',
-	templateUrl: './versement.component.html'
+    selector: 'app-versement',
+    templateUrl: './versement.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnMenuComponent, BtnComponent, ContentComponent, CardComponent, InfosContextComponent, SpinnerComponent, InfosDossierComponent, NotificationComponent, TeleportComponent, AutreDeviseComponent, InfosBeneficiaireComponent, SelectBeneficiaireComponent]
 })
 export class VersementComponent implements OnInit {
 

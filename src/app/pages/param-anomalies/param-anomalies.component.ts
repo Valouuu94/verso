@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TableComponent } from 'src/app/components/table/table.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
@@ -9,8 +11,10 @@ declare const crossVars: any;
 declare const appFormio: any;
 
 @Component({
-	selector: 'app-param-anomalies',
-	templateUrl: './param-anomalies.component.html'
+    selector: 'app-param-anomalies',
+    templateUrl: './param-anomalies.component.html',
+    standalone: true,
+    imports: [CommonModule, ContentComponent, TableComponent, ModalComponent]
 })
 export class ParamAnomaliesComponent implements OnInit {
 

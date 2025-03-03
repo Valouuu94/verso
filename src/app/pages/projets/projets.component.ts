@@ -1,14 +1,24 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TableComponent } from 'src/app/components/table/table.component';
+import { CommonModule } from '@angular/common';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { TableComponent } from '../../components/table/table.component';
+import { CommentsComponent } from '../../components/comments/comments.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ContentComponent } from '../../components/content/content.component';
+import { BtnComponent } from '../../components/btn/btn.component';
+import { NavActionsComponent } from '../../components/nav-actions/nav-actions.component';
 
 declare const app: any;
 declare const lang: any;
 
 @Component({
-	selector: 'app-projets',
-	templateUrl: './projets.component.html'
+    selector: 'app-projets',
+    templateUrl: './projets.component.html',
+    standalone: true,
+    imports: [CommonModule, NavActionsComponent, BtnComponent, ContentComponent, CardComponent, SpinnerComponent, CommentsComponent, TableComponent, ModalComponent]
 })
 export class ProjetsComponent implements OnInit {
 

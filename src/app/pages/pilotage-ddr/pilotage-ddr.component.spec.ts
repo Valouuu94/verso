@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PilotageDDRComponent } from './pilotage-ddr.component';
 
 describe('PilotageDDRComponent', () => {
@@ -8,8 +7,8 @@ describe('PilotageDDRComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PilotageDDRComponent ]
-    })
+    imports: [PilotageDDRComponent]
+})
     .compileComponents();
   });
 

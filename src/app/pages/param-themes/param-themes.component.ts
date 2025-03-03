@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TableComponent } from 'src/app/components/table/table.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { StoreService } from 'src/app/services/store.service';
+import { ModalComponent } from '../../components/modal/modal.component';
+import { TableComponent } from '../../components/table/table.component';
+import { ContentComponent } from '../../components/content/content.component';
 
 declare const app: any;
 declare const lang: any;
@@ -9,8 +10,10 @@ declare const crossVars: any;
 declare const appFormio: any;
 
 @Component({
-	selector: 'app-param-themes',
-	templateUrl: './param-themes.component.html'
+    selector: 'app-param-themes',
+    templateUrl: './param-themes.component.html',
+    standalone: true,
+    imports: [ContentComponent, TableComponent, ModalComponent]
 })
 export class ParamThemesComponent implements OnInit {
 

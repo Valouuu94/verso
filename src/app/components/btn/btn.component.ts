@@ -1,8 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'app-btn',
-	templateUrl: './btn.component.html'
+    selector: 'app-btn',
+    templateUrl: './btn.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class BtnComponent implements OnInit {
 

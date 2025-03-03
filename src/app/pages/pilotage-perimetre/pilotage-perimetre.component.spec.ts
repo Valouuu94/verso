@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PilotagePerimetreComponent } from './pilotage-perimetre.component';
 
 describe('PilotagePerimetreComponent', () => {
@@ -8,8 +7,8 @@ describe('PilotagePerimetreComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PilotagePerimetreComponent ]
-    })
+    imports: [PilotagePerimetreComponent]
+})
     .compileComponents();
   });
 
